@@ -83,10 +83,9 @@ class LoteController {
         }
     }
 
-
-    // *lotes y traer precio por id lab
     public function mostrarTablaCostos(){
-        $this->loteModel->getLotesYPrecio();
+        $lotes=$this->loteModel->getLotesYPrecio();
+        $this->view->renderTablaCostos($lotes);
     }
 }
 

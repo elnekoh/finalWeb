@@ -1,0 +1,16 @@
+API Rest:
+	a)Los cambios necesarios para llevara cabo estas solicitudes son:
+	A la tabla "lote" debemos añadirle el campo "disponibilidad", o similar (para poder ponerlo como usado o sin uso)
+	Deberiamos ponerle como valor por default "sin uso"
+	Y Tambien agregarle el campo "centroDeSalud_id" para saber a cual fue asignado (y crear la tabla "centro de salud"). y a las funciones del MVC hacerle un refactor para que le agrege centro de salud al insertar un lote
+	Debemos agregar al MVC "apiLotesController" y "apiView" (el model no es necesario ya que usamos los mismos models)
+
+
+	b)ENDPOINTS:	
+	VERBO:GET api/centroDeSalud (trae todos los centros de salud, con todos los datos)
+	VERBO:GET api/lotesDisponibles/:ID (trae solo un centro de salud, y solo muestra la cantidad de lotes disponibles)
+	
+	
+	c)Considero que solicitaron estas funcionalidades por API Rest porque puede que tengan pensado hacer estas consultas desde diferentes paginas o aplicaciones 
+	(recordemos que una de los uso para una api es para que podamos consultar, modificar, borrar y insertar datos a nuestra base de datos, y que pueden hacerlo desde cualquier dispositivo, ya que nos comunicamos 
+	la mayoria de las veces por JSON, y solo hace falta que el cliente interprete y nos mande tambien JSONs). 
